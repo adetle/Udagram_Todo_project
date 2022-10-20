@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": ".."
+		},
+		{
+			"path": "../../course-04/exercises/lesson-6"
 		}
 	],
 	"settings": {}

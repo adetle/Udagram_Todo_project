@@ -12,7 +12,7 @@ export class AttachmentUtils {
 
   constructor(
     private readonly s3Client = createS3Client(),
-    private readonly urlExpiration = process.env.SIGNED_URL_EXPIRATION
+    // private readonly urlExpiration = process.env.SIGNED_URL_EXPIRATION
   ) {
   }
 
@@ -21,7 +21,7 @@ export class AttachmentUtils {
     return this.s3Client.getSignedUrl('putObject', {
       Bucket: AttachmentUtils.bucketName,
       Key: imageId,
-      Expires: this.urlExpiration,
+      Expires: 300,
     })
   }
 
