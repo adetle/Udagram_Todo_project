@@ -26,7 +26,7 @@ export class TodosAccess {
 
     const result = await this.docClient.query({
       TableName: this.todosTable,
-      // IndexName: this.todosIndex,
+      IndexName: this.todosIndex,
       ExpressionAttributeValues: {
         ':userId': userId
       },
