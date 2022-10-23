@@ -3,7 +3,7 @@ import { APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda'
 const middy = require('middy')
 const { cors, httpErrorHandler } = require('middy/middlewares')
 
-import { getTodosPerUser as getTodosPerUser } from '../../helpers/todos'
+import { getTodosPerUser as getTodosPerUser } from '../../businessLogic/todos'
 import { getUserId } from '../utils';
 import { createLogger } from '../../utils/logger'
 
